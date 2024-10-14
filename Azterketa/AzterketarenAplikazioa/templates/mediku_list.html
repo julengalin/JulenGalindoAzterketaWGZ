@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <h1>Ongi etorri medikuen zerrendara</h1>
+        <ul>
+            {% extends 'base.html' %}
+            {% block content %}
+            <ul>
+                {% for mediku in medikuak %}
+                <li>{{ mediku }}</li>
+                <td>
+                    <a href="/delete/{{mediku.id}}" color="red">Ezabatu</a>
+                </td>
+                <td>
+                    <a href="/edit/{{mediku.id}}" color="red">Ezabatu</a>
+                </td>
+                {% endfor %}
+            </ul>
+            {% endblock %}
+        </ul>
+    </body>
+</body>
+
+</html>
